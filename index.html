@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="mdb/css/bootstrap.css">
+	<link rel="stylesheet" href="mdb/css/mdb.css">
+</head>
+<body class="bg-success">
+	<div class="container m-5">
+		<table class="table table-warning">
+			<tr>
+				<th>
+					<h2>User and Email Validation</h2>
+				</th>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" placeholder="Enter User name" id="un" class="h4 rounded-top border-light text-justify w-50 text-dark text-lowercase">
+					<span id="strength" class="ml-2 h4"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" placeholder="Enter Email" id="inp" class="h4 rounded-top border-light btn-danger text-justify w-50 text-white text-lowercase">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" id="res" class="rounded-top border-light btn-info text-justify h4 w-50 text-white text-lowercase" readonly>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<script src="jquery.js"></script>
+	<script src="email.js"></script>
+</body>
+</html>
