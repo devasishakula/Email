@@ -1,21 +1,29 @@
 $('#un').keyup(function()
 {
-	let res=$(this).val();
-	if(res.length<4) 
-	{
-		$(this).css({'background-color':'rgba(250,0,0,0.5)'});
-		$('#strength').text('weak').css({'color':'red'});
-	}
-	else if(res.length<6) 
-	{
-		$(this).css({'background-color':'gold'});
-		$('#strength').text('average').css({'color':'orange'});
-	}
-	else 
-	{
-		$(this).css({'background-color':'limegreen'});
-		$('#strength').text('strong').css({'color':'limegreen'});
-	}
+			let res=$(this).val();
+			let reg1=/[@#$]/;
+			let reg2=/[0-1]/;
+			if(res.length<4 && (res.match(reg1) && res.match(reg2)))
+			{
+				$(this).css({'background-color':'rgba(250,0,0,0.5)'});
+				$('#strength').text('weak').css({'color':'red'});
+			}
+			if(!(res.match(reg1) && res.match(reg2)))
+			{
+				$(this).css({'background-color':'rgba(250,0,0,0.5)'});
+				$('#strength').text('should have one special character & num').css({'color':'red'});
+			}
+			else if(res.length<6) 
+			{
+				$(this).css({'background-color':'gold'});
+				$('#strength').text('average').css({'color':'orange'});
+			}
+			else 
+			{
+				$(this).css({'background-color':'limegreen'});
+				$('#strength').text('strong').css({'color':'limegreen'});
+			}
+	
 });
 $('#inp').keyup(function()
 {
